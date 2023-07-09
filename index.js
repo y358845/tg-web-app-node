@@ -81,7 +81,7 @@ bot.on('message', async (msg) => {
     // }
 });
 
-app.post('/web-data', async (req, res) => {
+app.get('/web-data', async (req, res) => {
     // const {
     //     queryId,
     //     products = [],
@@ -103,7 +103,7 @@ app.post('/web-data', async (req, res) => {
     res.json('web-data')
     console.log('web-data');
 })
-app.get('/', async () => {
+app.post('/web-data', async () => {
     const {
         queryId,
         text
@@ -122,7 +122,7 @@ app.get('/', async () => {
     } catch (e) {
         return res.status(500).json({})
     }
-    console.log('ответище');
+ 
 })
 
 const PORT = 8000;
