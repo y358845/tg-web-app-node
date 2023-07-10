@@ -103,7 +103,7 @@ app.get('/web-data', async (req, res) => {
     res.json('web-data-get')
     console.log('web-data');
 })
-app.post('/web-data', async () => {
+app.post('/web-data', async (req, res) => {
     // const {
     //     queryId,
     //     text
