@@ -122,6 +122,7 @@ app.post('/web-data', async (req, res) => {
     // } catch (e) {
     //     return res.status(500).json({})
     // }
+    console.log('Приветище');
     res.json(`${queryId},${text}`)
 })
 
