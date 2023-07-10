@@ -104,25 +104,25 @@ app.get('/web-data', async (req, res) => {
     console.log('web-data');
 })
 app.post('/web-data', async (req, res) => {
-    // const {
-    //     queryId,
-    //     text
+    const {
+        queryId,
+        text
    
-    // } = req.body;
-    // try {
-    //     await bot.answerWebAppQuery(queryId, {
-    //         type: 'article',
-    //         id: queryId,
-    //         title: 'Успешная покупка',
-    //         input_message_content: {
-    //             message_text: text
-    //         }
-    //     })
-    //     return res.status(200).json({});
-    // } catch (e) {
-    //     return res.status(500).json({})
-    // }
-    res.json('web-data-post')
+    } = req.body;
+    try {
+        await bot.answerWebAppQuery(queryId, {
+            type: 'article',
+            id: queryId,
+            title: 'Успешная покупка',
+            input_message_content: {
+                message_text: text
+            }
+        })
+        return res.status(200).json({});
+    } catch (e) {
+        return res.status(500).json({})
+    }
+
 })
 
 const PORT = 8000;
