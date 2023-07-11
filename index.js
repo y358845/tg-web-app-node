@@ -109,26 +109,26 @@ app.post('/web-data', async (req, res) => {
         queryId
 
     } = req.body;
-    res.json(queryId);
-    try {
-        await bot.answerWebAppQuery(queryId, {
-            type: 'article',
-            id: queryId,
-            title: 'Успешная покупка',
-            input_message_content: {
-                message_text: 'сработало!'
-            }
-        })
-        return res.status(200).json({});
-    } catch (e) {
-        return res.status(500).json({})
-    }
+    // res.json(queryId);
+    // try {
+    //     await bot.answerWebAppQuery(queryId, {
+    //         type: 'article',
+    //         id: queryId,
+    //         title: 'Успешная покупка',
+    //         input_message_content: {
+    //             message_text: 'сработало!'
+    //         }
+    //     })
+    //     return res.status(200).json({});
+    // } catch (e) {
+    //     return res.status(500).json({})
+    // }
     // console.log('Приветище');
-    //  res.json(`${queryId},${text}`)
+      res.json(queryId)
 })
 
 const PORT = 8000;
 
-// app.listen(PORT, () => console.log('сервер стартовал на  PORT ' + PORT))
+
 app.listen(PORT, () => text.textStatusServer(PORT))
 
