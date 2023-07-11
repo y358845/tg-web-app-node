@@ -104,10 +104,12 @@ app.get('/web-data', async (req, res) => {
     console.log('web-data');
 })
 app.post('/web-data', async (req, res) => {
+ 
     const {
         queryId
 
     } = req.body;
+    res.json(queryId);
     try {
         await bot.answerWebAppQuery(queryId, {
             type: 'article',
