@@ -124,7 +124,7 @@ app.post('/web-data', async (req, res) => {
     //     return res.status(500).json({})
     // }
     // console.log('Приветище');
-      res(queryId)
+      res.json(queryId)
 })
 
 const PORT = 8000;
