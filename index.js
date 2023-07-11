@@ -105,9 +105,8 @@ app.get('/web-data', async (req, res) => {
 })
 app.post('/web-data', async (req, res) => {
     const {
-        queryId,
-        text
-   
+        queryId
+
     } = req.body;
     try {
         await bot.answerWebAppQuery(queryId, {
@@ -115,7 +114,7 @@ app.post('/web-data', async (req, res) => {
             id: queryId,
             title: 'Успешная покупка',
             input_message_content: {
-                message_text: text
+                message_text: 'сработало!'
             }
         })
         return res.status(200).json({});
