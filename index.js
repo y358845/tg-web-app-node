@@ -6,7 +6,7 @@ const HTTPrequest1C = require('./functions/function_1c');
 
 const token = '5702490586:AAFuAJTmWEDhxyz7aZxfsNNq-l-lzAjoSpc';
 // const webAppUrl = 'https://illustrious-mandazi-76fa81.netlify.app/#/';
-const webAppUrl = 'httpы://rostgmu-uit.ru/test/#/';
+const webAppUrl = 'httpы://rostgmu-uit.ru/test';
 
 const bot = new TelegramBot(token, {
     polling: true
