@@ -24,7 +24,7 @@ bot.on('message', async (msg) => {
         let answer = HTTPrequest1C.getUser(chatId)
         answer.then(function(result){
             user_1c = result
-           console.log(chatId)
+        //    console.log(chatId)
              bot.sendMessage(chatId, `Чат бот приветствует вас, ${user_1c.name}! Доступные вам функции:`, {
                 reply_markup: {
                 
